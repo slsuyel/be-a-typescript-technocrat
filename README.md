@@ -1,65 +1,71 @@
-// File: dataTypesExamples.ts
+# TypeScript Data Types Examples
 
-// Primitive Data Types
-let age: number = 25;
-let name: string = "John Doe";
-let isStudent: boolean = true;
-let nullValue: null = null;
-let undefinedValue: undefined = undefined;
-const sym: symbol = Symbol("key");
+This repository contains TypeScript code examples demonstrating different data types and usage, including both primitive and non-primitive data types, along with a specific focus on tuples.
 
-// Non-Primitive (Complex) Data Types
-let numbers: number[] = [1, 2, 3, 4, 5];
-let person: { name: string, age: number } = { name: "Alice", age: 30 };
-let greet: Function = () => {
-    console.log("Hello, world!");
-};
-let today: Date = new Date();
-let dynamicValue: any = 10;
-dynamicValue = "Hello";
+## File: `dataTypesExamples.ts`
 
-// You can add comments to explain each section or type if needed.
+### Data Types Used
 
-// Testing the code
-console.log(age);
-console.log(name);
-console.log(isStudent);
-console.log(nullValue);
-console.log(undefinedValue);
-console.log(sym);
+#### Primitive Data Types
 
-console.log(numbers);
-console.log(person);
-greet();
-console.log(today);
-console.log(dynamicValue);
+- `number`: Represents numeric values. Example: `let age: number = 25;`
+- `string`: Represents textual data. Example: `let name: string = "John Doe";`
+- `boolean`: Represents a boolean value (true/false). Example: `let isStudent: boolean = true;`
+- `null`: Represents an intentional absence of any object value. Example: `let nullValue: null = null;`
+- `undefined`: Represents a variable that has been declared but not assigned a value. Example: `let undefinedValue: undefined = undefined;`
+- `symbol`: Represents unique and immutable data. Example: `const sym: symbol = Symbol("key");`
 
-// Declare a tuple
+#### Non-Primitive (Complex) Data Types
+
+- `number[]`: Represents an array of numbers. Example: `let numbers: number[] = [1, 2, 3, 4, 5];`
+- Object types like `{ name: string, age: number }`, functions, dates, and `any` type are also demonstrated.
+
+### Code Execution
+
+The code demonstrates the initialization and usage of these data types through console.log statements.
+
+### Tuples in TypeScript
+
+#### Declaring a Tuple
+
+A tuple is a fixed-size collection that can hold elements of different types. Example:
+
+```typescript
 let person: [string, number, boolean];
+Save to grepper
+Initializing a Tuple
+Tuples can be initialized with values adhering to their structure. Example:
 
-// Initialize the tuple
+typescript
+Copy code
 person = ["Alice", 30, true];
+Save to grepper
+Accessing Elements in a Tuple
+Elements within a tuple can be accessed by their index. Example:
 
-// Accessing elements in the tuple
+typescript
+Copy code
 console.log(person[0]); // Output: Alice
 console.log(person[1]); // Output: 30
 console.log(person[2]); // Output: true
+Save to grepper
+Updating Tuple Elements
+Tuple elements can be updated individually by index. Example:
 
-// Invalid operation - accessing beyond tuple length will throw an error
-// console.log(person[3]); // Error: Tuple type '[string, number, boolean]' of length '3' has no element at index '3'.
-
-// Updating tuple elements
+typescript
+Copy code
 person[0] = "Bob";
 person[1] = 25;
+Save to grepper
+Validating Tuple Structure
+Assigning values that do not match the tuple's structure will result in a TypeScript error. Example:
 
-// Validating a tuple structure
+typescript
+Copy code
 let employee: [string, number];
-
 // This will throw an error because the tuple structure doesn't match
-// employee = ["John", 28, true]; // Error: Type 'boolean' is not assignable to type 'undefined'.
-
-
-
+// employee = ["John", 28, true];
+// Error: Type 'boolean' is not assignable to type 'undefined'
 
 
 #git checkout -b module-1
