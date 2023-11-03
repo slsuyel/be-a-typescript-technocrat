@@ -14,3 +14,14 @@ const user: {
 }
 
 
+const cuntry: {
+    name: string;
+    population: number;
+    isIndependece: boolean;
+    religion?: string;
+} = {
+    name: 'bangladesh',
+    population: 212121,
+    isIndependece: true,
+
+}

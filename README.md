@@ -34,17 +34,16 @@ A tuple is a fixed-size collection that can hold elements of different types. Ex
 let person: [string, number, boolean];
 Save to grepper
 Initializing a Tuple
-Tuples can be initialized with values adhering to their structure. Example:
+Tuples can be initialized with values adhering to their structure.
 
-typescript
-Copy code
+- `Example:
+
 person = ["Alice", 30, true];
 Save to grepper
 Accessing Elements in a Tuple
 Elements within a tuple can be accessed by their index. Example:
 
-typescript
-Copy code
+
 console.log(person[0]); // Output: Alice
 console.log(person[1]); // Output: 30
 console.log(person[2]); // Output: true
@@ -52,16 +51,14 @@ Save to grepper
 Updating Tuple Elements
 Tuple elements can be updated individually by index. Example:
 
-typescript
-Copy code
+
 person[0] = "Bob";
 person[1] = 25;
 Save to grepper
 Validating Tuple Structure
 Assigning values that do not match the tuple's structure will result in a TypeScript error. Example:
 
-typescript
-Copy code
+
 let employee: [string, number];
 // This will throw an error because the tuple structure doesn't match
 // employee = ["John", 28, true];
