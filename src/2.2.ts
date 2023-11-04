@@ -1,40 +1,33 @@
 {
 
-    // type assertion  > In TypeScript, type assertion is a mechanism which tells the compiler about the type of a variable
+    //interface
 
 
-    const kgToGm = (value: string | number): string | number | undefined => {
-        if (typeof value === 'string') {
-            const convertedValue = parseFloat(value) * 1000
-            return `The converted value is ${convertedValue} g`
-        }
 
-        if (typeof value === 'number') {
-            return value * 1000
-        }
-
+    /* type */
+    type User1 = {
+        name: string;
+        age: number;
     }
 
 
-    const res1 = kgToGm(1) as number
-
-    const res2 = kgToGm('1000') as string
-
-    console.log({ res1 }, { res2 });
-
-
-
-    // try and catch 
-
-
-    type CustomError = {
-        message: string
+    const user1: User1 = {
+        name: 'Suyel',
+        age: 5
     }
 
-    try {
 
-    } catch (error) {
-        console.log((error as CustomError).message);
+    /* interface */
+
+    interface User2 {
+        name: string;
+        age: number
+    }
+
+
+    const user2: User2 = {
+        name: 'Suyel',
+        age: 15
     }
 
 
@@ -43,5 +36,7 @@
 
 
 
-    /* ------------------------ */
+
+
+
 }
