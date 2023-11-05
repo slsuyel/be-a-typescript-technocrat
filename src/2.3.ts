@@ -5,7 +5,6 @@
 
 
 
-
     //   const rollNumber : number[] = [1,2,1,5,4]
     // const rollNumber: Array<number> = [1, 2, 1, 5, 4]
     const rollNumber: GenericArray<number> = [1, 2, 1, 5, 4]
@@ -22,8 +21,6 @@
     // const boolArray: boolean[] = [true, false, true]
     // const boolArray: Array<boolean> = [true, false, true]
     const boolArray: GenericArray<boolean> = [true, false, true]
-
-
 
 
 
@@ -53,8 +50,6 @@
     const manus: GenericTuple<string, string> = ['Mr X', 'Mr y']
 
     const userWithId: GenericTuple<number, { name: string, email: string }> = [121, { name: 'name', email: 'a@a.com' }]
-
-
 
 
 
